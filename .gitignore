@@ -1,2 +1,2 @@
 # .gitignore for Logisim projects
-.exe
+*.exe
