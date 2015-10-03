@@ -6,7 +6,7 @@ An 8-bit CPU created in Logisim
   * Any ALU operation
   * A read from memory (not registers)
 * __R1__: Used as a general purpose register. Has no extra functions.
-* __R2__: Jump and memory pointer. The value in this register will be the instruction index a jump branches to, and the index of memory that is written to or read from.
+* __R2__: Jump and memory pointer, capable of addressing 256 registers (only 32 will likely be available in the Minecraft version for simplicity's sake). The value in this register will be the instruction index a jump branches to, and the index of memory that is written to or read from.
 * __R3__: Contains the value that will be displayed on a seven-segment display when the \'disp\' instruction is called. General purpose otherwise.
   
   
