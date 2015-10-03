@@ -40,11 +40,11 @@ copy <src> <dest>
   
 <op> [shift direction]  (ALU Instructions)
 0011 aabc
-  a: Operation to perform:
-    0: Pass
-    1: Sum
-    2: And
-    3: Shift
+  a: Operation to perform (with worst-case tick counts):
+    0: Pass (1 tick)
+    1: Sum (19 ticks worst-case using Kogge-Stone down from 32 using Ripple-Carry)
+    2: And (4 ticks)
+    3: Shift (5 ticks)
   b: Negate (bitwise) ALU's output
   c: Shift direction:
     0: Left
