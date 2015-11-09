@@ -1,0 +1,41 @@
+# Add from stack
+
+push 0
+copy 0, 2
+push 1
+load 0, 0
+neg
+load 0, 0
+push 1
+load 0, 1
+sum
+load 0, 1
+mem get
+load 0, 0
+sum
+copy 0, 1
+copy 0, 2
+mem get
+copy 0, 3
+push 1
+load 0, 0
+neg
+load 0, 0
+push 1
+load 0, 1
+sum
+load 0, 1
+load 2, 0
+sum
+copy 0, 2
+mem get
+copy 2, 1
+load 3, 0
+load 0, 1
+push 0
+copy 0, 2
+copy 1, 0
+mem set
+sum
+copy 1, 2
+mem set

@@ -1,0 +1,33 @@
+# Pop stack to var[$0]
+
+push 0
+copy 0, 2
+push 1
+load 0, 0
+load 0, 1
+neg
+load 0, 0
+sum
+load 0, 1
+mem get
+load 0, 0
+sum
+copy 0, 1
+copy 0, 2
+mem get
+copy 0, 3
+push 0x40
+load 0, 0
+load 0, 1
+sum
+load 0, 0
+push $0
+load 0, 1
+sum
+copy 0, 2
+copy 3, 0
+mem set
+push 0
+copy 0, 2
+copy 1, 0
+mem set

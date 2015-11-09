@@ -1,0 +1,26 @@
+# Push var[$0] to stack
+
+push 0x40
+load 0, 0
+load 0, 1
+sum
+load 0, 0
+push $0
+load 0, 1
+add
+copy 0, 2
+mem get
+copy 0, 3
+push 0
+copy 0, 2
+mem get
+copy 0, 2
+copy 3, 0
+mem set
+load 2, 0
+sum
+copy 0, 1
+push 0
+copy 0, 2
+copy 1, 0
+mem set
