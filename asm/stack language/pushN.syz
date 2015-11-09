@@ -1,0 +1,18 @@
+# Stack operation library - push %0 to stack
+# Memory 0x00 = Stack pointer
+# Memory 0x10 = Stack start
+# %0 is an assembler variable that is dynamically replaced when called.
+
+push 0
+copy 0, 2
+mem get
+copy 0, 2
+push %0
+mem set
+load 2, 0
+push 1
+load 0, 1
+push 0
+copy 0, 2
+sum
+mem set

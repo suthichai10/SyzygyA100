@@ -1,0 +1,3 @@
+# Pop and jump if less than 0
+%lib.popToR0
+jump lte

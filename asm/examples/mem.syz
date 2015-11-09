@@ -1,0 +1,27 @@
+# Memory Access example
+
+# Push memory address (hex is also allowed)
+push 0x40
+
+# Copy R0 to R2 (memory pointer = R2's value)
+copy 0, 2
+
+# Push the value that will be written to 0x40
+push 17
+
+# Set memory address in R2 to R0's value
+mem set
+
+# Set 0x34 to 100
+push 0x34
+copy 0, 2
+push 100
+mem set
+
+# Get memory address 0x40's value and display it
+push 0x40
+copy 0, 2
+mem get
+copy 0, 3
+disp
+

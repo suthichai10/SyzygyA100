@@ -1,0 +1,23 @@
+# This program serves as an example of basic addition (no stack use)
+# 5 + 14 = 19, then display
+
+# Push 0x5 to R0
+push 5
+
+# Load ALU side A with R0's value
+load 0, 0
+
+# Push 0xE to R0
+push 14
+
+# Load ALU side B with R0's value
+load 0, 1
+
+# Set R0 to the result of A + B
+sum
+
+# Copy R0's value to R3 (display register)
+copy 0, 3
+
+# Write display memory
+disp

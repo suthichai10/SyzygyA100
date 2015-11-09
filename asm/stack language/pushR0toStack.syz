@@ -1,0 +1,15 @@
+# Push R0's value to stack
+
+copy 0, 1
+push 0
+copy 0, 2
+mem get
+copy 0, 2
+copy 1, 0
+push 1
+load 2, 0
+load 0, 1
+push 0
+copy 0, 2
+add
+mem set
