@@ -1,0 +1,104 @@
+# Multiply function for stack-based computation
+
+# Reset R3
+push 0
+copy 0, 3
+
+# Set up -1 in ALU's B side
+push 1
+load 0, 0
+load 0, 1
+neg
+load 0,0
+sum
+load 0, 1
+
+# Pop to Mem 0x01
+copy 3, 2
+mem get
+load 0, 0
+sum
+load 0, 0
+copy 0, 2
+mem get
+copy 0, 1
+push 1
+copy 0, 2
+copy 1, 0
+mem set
+
+# Subtract and set stack pointer
+copy 3, 2
+sum
+mem set
+
+# Pop to Mem 0x02
+copy 0, 2
+mem get
+copy 0, 1
+push 2
+copy 0, 2
+copy 1, 0
+mem set
+
+# Jump to end of iteration if 0x02 <= 0
+$loop_lib.mult
+push 2
+copy 0, 2
+mem get
+copy 0, 1
+push $loop_lib.mult.end
+copy 0, 2
+copy 1, 0
+jump lte
+
+# Load 0x01 to ALU B
+push 1
+copy 0, 2
+mem get
+load 0, 1
+
+# Load R3 (starts at 0) to ALU A
+load 3, 0
+
+# Add and store to R3
+sum
+copy 0, 3
+
+# Decrement 0x02
+push 1
+load 0, 0
+load 0, 1
+neg
+load 0, 0
+sum
+load 0, 1
+push 2
+copy 0, 2
+mem get
+load 0, 0
+sum
+mem set
+
+# Jump to iteration start
+push $loop_lib.mult
+copy 0, 2
+jump
+
+# After loop, push R3 on the stack
+$loop_lib.mult.end
+push 0
+copy 0, 2
+mem get
+copy 0, 2
+copy 3, 0
+mem set
+
+# Increment Stack Pointer
+load 2, 0
+push 1
+load 0, 1
+push 0
+copy 0, 2
+sum
+mem set
