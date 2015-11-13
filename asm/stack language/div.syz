@@ -1,0 +1,92 @@
+# lib_div
+
+# Reset R3
+push 0
+copy 0, 3
+
+# Load B with -1
+push 1
+load 0, 0
+load 0, 1
+neg
+load 0, 0
+sum
+load 0, 1
+
+# Pop to 0x01
+copy 3, 2
+mem get
+load 0, 0
+push 1
+copy 0, 1
+sum
+copy 0, 2
+load 0, 0
+mem get
+copy 1, 2
+mem set
+
+# Set SP
+sum
+copy 3, 2
+mem set
+
+# Pop to 0x02
+copy 0, 2
+mem get
+load 0, 0
+push 1
+load 0, 1
+neg
+load 0, 0
+push 2
+copy 0, 2
+sum
+mem set
+
+# Load 0x01 and 0x02 to ALU
+$lib_div.loop
+copy 1, 2
+mem get
+load 0, 0
+push 2
+copy 0, 2
+mem get
+load 0, 1
+
+# Jump if less than 0
+push $lib_div.end
+copy 0, 2
+sum
+jump lt
+
+# Set 0x01 to the result
+copy 1, 2
+mem set
+
+# Increment R3
+load 1, 1
+load 3, 0
+sum
+copy 0, 3
+
+# Jump back
+push $lib_div.loop
+copy 0, 2
+jump
+
+# Finished iterations, push R3 to stack
+$lib_div.end
+push 0
+copy 0, 2
+mem get
+copy 0, 2
+copy 3, 0
+mem set
+load 1, 1
+push 0
+copy 0, 2
+mem get
+load 0, 0
+sum
+mem set
