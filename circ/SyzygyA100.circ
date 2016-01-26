@@ -2276,6 +2276,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(410,940)" to="(430,940)"/>
     <wire from="(360,1450)" to="(380,1450)"/>
     <wire from="(410,220)" to="(430,220)"/>
+    <wire from="(360,1930)" to="(380,1930)"/>
     <wire from="(360,1690)" to="(380,1690)"/>
     <wire from="(410,1180)" to="(430,1180)"/>
     <wire from="(410,1420)" to="(430,1420)"/>
@@ -2306,6 +2307,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,970)" to="(360,1090)"/>
     <wire from="(360,1210)" to="(360,1330)"/>
     <wire from="(360,1450)" to="(360,1570)"/>
+    <wire from="(360,1690)" to="(360,1810)"/>
     <wire from="(140,80)" to="(140,150)"/>
     <wire from="(490,1860)" to="(850,1860)"/>
     <wire from="(190,80)" to="(190,750)"/>
@@ -2431,14 +2433,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,130)" to="(380,130)"/>
     <wire from="(360,1090)" to="(380,1090)"/>
     <wire from="(360,610)" to="(380,610)"/>
-    <wire from="(360,1330)" to="(380,1330)"/>
     <wire from="(410,580)" to="(430,580)"/>
+    <wire from="(360,1330)" to="(380,1330)"/>
     <wire from="(410,820)" to="(430,820)"/>
     <wire from="(410,340)" to="(430,340)"/>
     <wire from="(360,1570)" to="(380,1570)"/>
     <wire from="(410,1060)" to="(430,1060)"/>
     <wire from="(410,1300)" to="(430,1300)"/>
     <wire from="(410,1540)" to="(430,1540)"/>
+    <wire from="(360,1810)" to="(380,1810)"/>
     <wire from="(410,1780)" to="(430,1780)"/>
     <wire from="(410,2020)" to="(430,2020)"/>
     <wire from="(370,1350)" to="(380,1350)"/>
@@ -2467,6 +2470,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(730,110)" to="(730,420)"/>
     <wire from="(360,1330)" to="(360,1450)"/>
     <wire from="(360,1570)" to="(360,1690)"/>
+    <wire from="(360,1810)" to="(360,1930)"/>
     <wire from="(490,1260)" to="(800,1260)"/>
     <wire from="(780,110)" to="(780,1020)"/>
     <wire from="(190,750)" to="(370,750)"/>
