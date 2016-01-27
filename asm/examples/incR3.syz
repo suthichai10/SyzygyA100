@@ -1,0 +1,25 @@
+# A simple program that will endlessly increment the value in R3.
+
+# Setup
+push 1
+load 0, B
+push 4
+copy 0, 2
+
+# Loop
+load 3, A
+sum
+copy 0, 3
+jump
+
+
+# Bytecode of above program:
+# 
+# 00: 1000 0001
+# 01: 0001 0001
+# 02: 1000 0100
+# 03: 0010 0010
+# 04: 0001 1110
+# 05: 0011 0100
+# 06: 0010 0011
+# 07: 0100 1110
