@@ -18,6 +18,3 @@ sum
 
 # Copy R0's value to R3 (display register)
 copy 0, 3
-
-# Write display memory
-disp
