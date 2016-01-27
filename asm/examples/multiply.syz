@@ -1,0 +1,44 @@
+# Multiply 13 * 7 = 91
+
+81  push 1
+13  load 0, AB
+32  neg
+12  load 0, A
+34  sum
+21  copy 0, 1
+1d  push 13
+58  mem set
+81  push 1
+22  copy 0, 2
+87  push 7
+58  mem set
+81  :push 1
+22  copy 0, 2
+50  mem get
+23  copy 0, 3
+a7  push 39
+22  copy 0, 2
+2c  copy 3, 0
+4c  jump lte
+12  load 0, A
+15  load 1, B
+81  push 1
+22  copy 0, 2
+34  sum
+58  mem set
+80  push 0
+22  copy 0, 2
+50  mem get
+11  load 0, B
+82  push 2
+22  copy 0, 2
+50  mem get
+12  load 0, A
+34  sum
+58  mem set
+8c  push 12
+22  copy 0, 2
+5c  jump
+82  :push 2
+22  copy 0, 2
+50  mem get
