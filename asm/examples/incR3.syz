@@ -3,7 +3,7 @@
 # Setup
 push 1
 load 0, B
-push 4
+push 0x04
 copy 0, 2
 
 # Loop
