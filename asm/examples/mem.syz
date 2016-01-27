@@ -23,5 +23,3 @@ push 0x40
 copy 0, 2
 mem get
 copy 0, 3
-disp
-
