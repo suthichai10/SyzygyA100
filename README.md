@@ -1,6 +1,17 @@
 # SyzygyA100
 An 8-bit CPU created in Logisim  
   
+### Specifications
+* Instruction width: 8
+* Data width: 8
+* Memory address width: 8
+* Maximum integer value: 255
+* Instruction memory: 256B
+* System memory: 256B
+* Instructions are decoded on the rising-edge of the clock tick, and are executed on the falling edge.
+* Expandable with up to 16 external components.
+* See asm/examples/ folder for example programs.
+  
 ### Registers
 * __R0__: The most used register. Used for ALU output, writing its value to memory, and fetching a value from memory to this register. The following operations will overwrite this register:
   * Any ALU operation
